@@ -1,0 +1,21 @@
+<div class="work-order-card">
+  <div class="card" style="width: 500px; height: 400px">
+    <div class="card-body">
+      <div class="work-info">
+        <h4>{{ order[0].name }}</h4>
+        <p>{{ order[0].description }}</p>
+      </div>
+      <div class="contact-info">
+        <img src="{{ order[1].image }}" />
+        <p>
+          {{ order[1].name }}<br />
+          {{ order[1].companyName }}<br />
+          {{ order[1].email }}<br />
+        </p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <p>{{ formatDate(order[0].deadline) }}</p>
+    </div>
+  </div>
+</div>

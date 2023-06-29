@@ -1,0 +1,41 @@
+<div class="text-center" style="background-color: #282c34; min-height: 100vh">
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <form>
+      <div class="form-group">
+        <input
+          [(ngModel)]="search"
+          class="form-control Large-field"
+          placeholder="Filter by worker name..."
+          style="width: 100vh; margin-top: 40px; margin-bottom: 40px"
+        />
+      </div>
+    </form>
+    <label>
+      <mat-slide-toggle
+        (change)="toggle()"
+        [labelPosition]="'before'"
+        class="toggle"
+      >
+        {{ sortDate ? "Latest first" : "Earliest first" }}
+      </mat-slide-toggle>
+    </label>
+    <div class="card-grid">
+      <div
+        *ngFor="
+          let order of workOrders
+            | filterByWorkerName : search
+            | orderByDeadline : sortDate
+        "
+      >
+        <app-work-order-card [order]="order"></app-work-order-card>
+      </div>
+    </div>
+  </div>
+</div>

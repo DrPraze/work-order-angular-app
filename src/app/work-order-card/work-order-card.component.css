@@ -1,0 +1,49 @@
+.work-order-card {
+  color: black;
+}
+
+.work-order-card p {
+  font-size: 16px;
+  margin: auto;
+  text-align: left;
+}
+
+.work-order-card img {
+  border-radius: 250px;
+  max-width: 50%;
+  justify-self: center;
+}
+
+.work-info p {
+  max-width: 80%;
+}
+
+.work-info h4 {
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+}
+
+.contact-info p {
+  justify-self: start;
+}
+
+.card {
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-footer p {
+  text-align: right;
+  font-style: italic;
+}
